@@ -1,5 +1,8 @@
 package networkUtility;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
 import com.example.user.moviereviewer.MainActivity;
@@ -73,5 +76,15 @@ public class NetworkUtility {
             e.printStackTrace();
             Log.e(TAG,"Error in JSON PARSING");
         }
+    }
+
+    public static boolean isConnected(Context context){
+        ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        if(networkInfo != null && networkInfo.isConnected()){
+            return true;
+        }
+        return false;
     }
 }
