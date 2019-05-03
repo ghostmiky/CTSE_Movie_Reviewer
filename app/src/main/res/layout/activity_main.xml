@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.moviereviewer.MainActivity">
 
+
     <ProgressBar
         android:id="@+id/loadingBar"
         android:layout_width="wrap_content"
@@ -33,4 +34,33 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <!--<TextView-->
+
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="149dp"-->
+        <!--android:layout_marginLeft="149dp"-->
+        <!--android:layout_marginTop="68dp"-->
+        <!--android:text="Movie Review" />-->
+
+    <!--<GridView-->
+        <!--android:id="@+id/gv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="118dp" />-->
+
 </RelativeLayout>
+
+
+
+
+

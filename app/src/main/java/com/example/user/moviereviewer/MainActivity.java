@@ -3,6 +3,7 @@ package com.example.user.moviereviewer;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -11,6 +12,14 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,8 +36,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
         progressBar.setVisibility(View.INVISIBLE);
+
+        GridView gv = (GridView) findViewById(R.id.gv);
+        String[] plants = new String[]{
+                "Catalina ironwood",
+                "Cabinet cherry",
+                "Pale corydalis",
+                "Pink corydalis",
+                "Land cress",
+                "Coast polypody",
+                "Water fern"
+        };
+
+        final List<String> plantsList = new ArrayList<>(Arrays.asList(plants));
+
+        // Create a new ArrayAdapter
+        final ArrayAdapter<String> gridViewArrayAdapter = new ArrayAdapter<String>
+                (this,android.R.layout.simple_list_item_1, plantsList);
+
+        gv.setAdapter(gridViewArrayAdapter);
 
 
     }
@@ -56,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(s);
             progressBar.setVisibility(View.INVISIBLE);
         }
+
+
+
+
     }
 
 }

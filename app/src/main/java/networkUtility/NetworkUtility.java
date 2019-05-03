@@ -31,7 +31,7 @@ public class NetworkUtility {
             for(int i=0;i<jsonArray.length();i++){
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Movie mov = new Movie();
-                
+
             }
 
 
